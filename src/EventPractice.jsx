@@ -42,8 +42,8 @@ class EventPractice extends Component{
                 //             message: e.target.value
                 //         })
                 //     }
-                onChange={this.handleChange} onKeyPress={this.handleKeyPress}/>
-                <button onClick={
+                onChange={this.handleChange} onKeyDown={this.handleKeyPress}/>
+                <button type="button" onClick={
                     // () => {
                     //     alert(this.state.message);
                     //     this.setState({
