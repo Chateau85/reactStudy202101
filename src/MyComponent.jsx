@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class MyComponent extends Component {
     static defaultProps = {
         name: '기본 이름'
-    }
-    static propTypes = {
-        name: PropTypes.string, // name props 타입을 문자열로 설정합니다.
-        age: PropTypes.number.isRequired // 필수적으로 존재해야 하며, 숫자입니다.
     }
     // constructor(props){
     //     super(props);
@@ -38,9 +33,5 @@ class MyComponent extends Component {
 // MyComponent.defaultProps = {
 //     name: '기본 이름'
 // }
-
-MyComponent.defaultProps = {
-    name: PropTypes.string // name props 타입을 문자열로 설정합니다.
-}
 
 export default MyComponent;

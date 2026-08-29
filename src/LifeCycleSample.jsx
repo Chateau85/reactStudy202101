@@ -28,9 +28,9 @@ class LifeCycleSample extends Component {
         console.log('componentWillUnmount');
     }
     handleClick = () => {
-        this.setState({
-            number: this.state.number + 1
-        });
+        this.setState((state) => ({
+            number: state.number + 1,
+        }));
     }
     getSnapshotBeforeUpdate(prevProps, prevState){
         console.log('getSnapshotBeforeUpdate');
@@ -54,7 +54,7 @@ class LifeCycleSample extends Component {
             <div>
                 <h1 style={style} ref={ref => this.myRef=ref}>{this.state.number}</h1>
                 <p>color: {this.state.color}</p>
-                <button onClick={this.handleClick}>더하기</button>
+                <button type="button" onClick={this.handleClick}>더하기</button>
             </div>
         );
     }
